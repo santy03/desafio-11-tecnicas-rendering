@@ -1,16 +1,24 @@
+import { Button } from '@material-ui/core';
+import { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
-import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from "./StyledComponents";
+import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from './StyledComponents';
+import { CartContext } from './CartContext';
 
 const ItemDetail = ({ item }) => {
+    const [itemCount, setItemCount] = useState(0);
+    const test = useContext(CartContext);
 
     const onAdd = (qty) => {
         alert("You have selected " + qty + " items.");
+        setItemCount(qty);
+        test.addToCart(item, qty);
     }
 
     return (
         <>
         {
-            item.image
+            item && item.image
             ? 
             <DetailContainer>
                 <WrapperDetail>
@@ -23,10 +31,14 @@ const ItemDetail = ({ item }) => {
                         <Price>$ {item.cost}</Price>
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoContainer>
-                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                    {
+                        itemCount === 0
+                        ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />                            
+                        : <Link to='/Cart' style={{textDecoration: "none"}}><Button variant="contained" color="secondary">Verificar Compra</Button></Link>
+                    }
                 </WrapperDetail>
             </DetailContainer>
-            : <p>Cargando...</p>
+            : <p>Recalculando...</p>
         }
         </>
     );

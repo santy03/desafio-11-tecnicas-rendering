@@ -2,7 +2,7 @@ const products = [
     {
       id: 1,
       name: "ZAPATILLAS RUNNING ADIDAS CORERACER NEGRA HOMBRE",
-      stock: 159,
+      stock: 149,
       cost: 10499,
       description: "Las zapatillas ADIDAS Coreracer ofrecen la combinación perfecta de sujeción para running y estilo urbano. Son livianas y transpirables para mantener tus pies cómodos en todo momento. Lucen un logo ADIDAS Badge of Sport que le pone el toque final al look de alto rendimiento. Diseñada para corredores con pisada neutra.",
       capacity: 450,
@@ -31,7 +31,7 @@ const products = [
       name: "ZAPATILLAS RUNNING ADIDAS CORERACER NEGRA MUJER",
       stock: 379,
       cost: 10499,
-      description: "las zapatillas ADIDAS Coreracer ofrecen la combinación perfecta de comodidad y estilo. Su diseño liviano y transpirable brinda comodidad en todo momento y el logo adidas Badge of Sport les confiere un look de alto rendimiento. Diseñada para corredoras con pisada neutra.",
+      description: "Las zapatillas ADIDAS Coreracer ofrecen la combinación perfecta de comodidad y estilo. Su diseño liviano y transpirable brinda comodidad en todo momento y el logo adidas Badge of Sport les confiere un look de alto rendimiento. Diseñada para corredoras con pisada neutra.",
       capacity: 700,
       image: [
         "https://cdn.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-running-adidas-coreracer-mujer-negra-100010fx3603001-1.jpg",      
@@ -66,7 +66,7 @@ const products = [
       description: "Las zapatillas PUMA Wired son perfectas incluso para los atletas más jóvenes. La parte superior de malla transpirable está acentuada por una banda elástica en el antepié con la marca PUMA llamativa. La cómoda plantilla SoftFoam + proporciona una amortiguación superior sin importar a dónde lo lleve el día. Cuenta con cordones elásticos.",
       capacity: 799,
       image: [
-        "https://cdn.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-running-puma-wired-ni_o-azul-640010384308013-1.jpg",
+        "https://cdn.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-running-puma-wired-ni_o-ni_a-azul-640010384308013-1.jpg",
       ],
 
       sales: 0,
@@ -471,6 +471,4 @@ const products = [
     },
   ];
 
-  module.exports = {
-    products,
-  }
+ export default products; 
