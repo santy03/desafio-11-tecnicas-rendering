@@ -181,7 +181,8 @@ const Top = styled.div`
 const TopButton = styled.button`
   padding: 10px;
   font-weight: 600;
-  width: 188px;
+  font-family: 'Source Serif Pro', serif;
+  width: 200px;
   cursor: pointer;
   border: ${(props) => props.type === "filled" && "none"};
   background-color: ${(props) =>

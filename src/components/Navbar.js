@@ -26,7 +26,7 @@ const Navbar= () => {
           <a className="nav-link " href="/category/4" style={{color:"purple"}}>Niña</a>
         </li>
       </ul>
-      <CartWidget/>
+        <a href="/cart"><CartWidget/></a>  
     </div>
   </div>
 </nav>
